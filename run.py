@@ -19,17 +19,21 @@ main_sales = SHEET.worksheet("main_sales")
 def request_main_sales():
     """Main sales data request from user"""
 
-    print("welcome to Afro_styles, please enter yesterday's main sales.")
-    print("please enter four numbers, separated by commas.")
-    print("for_instance: 20,1,44,5\n")
+    while True:
+        print("welcome to Afro_styles, please enter yesterday's main sales.")
+        print("please enter four numbers, separated by commas.")
+        print("for_instance: 20,1,44,5\n")
 
-    last_sales = input("Enter last sales: ")
+        last_sales = input("Enter last sales: ")
     
-    # split method to break commas from string data in a list
-    main_sales_data = last_sales.split(",")
+        # split method to break commas from string data in a list
+        main_sales_data = last_sales.split(",")
     
-    # call rates date from authentic_data function
-    authentic_data(main_sales_data)
+        # call rates date from authentic_data and if statement to true rates
+        if authentic_data(main_sales_data):
+            print("Data is valid")
+            break
+    return main_sales_data
 
 def authentic_data(rates):
     """
@@ -43,5 +47,6 @@ def authentic_data(rates):
             )
     except ValueError as e:
         print(f"Invalid rates: {e}, please try again.\n")
-
-request_main_sales()
+        return False
+    return True
+new_data = request_main_sales()
