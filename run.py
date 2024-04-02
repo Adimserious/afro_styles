@@ -36,6 +36,7 @@ def authentic_data(rates):
     try statement to coverts string rates to integer, raise valueError if not interger or 4 rates exactly
     """
     try:
+        [int(rate) for rate in rates]
         if len(rates) != 4:
             raise ValueError(
                 f"4 rates are required, you provided {len(rates)}"
