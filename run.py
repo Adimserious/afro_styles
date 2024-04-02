@@ -16,5 +16,15 @@ SHEET = GSPREAD_CLIENT.open("afro_styles")
 
 main_sales = SHEET.worksheet("main_sales")
 
-afro_data = main_sales.get_all_values()
-print(afro_data)
+def request_main_sales():
+    """Main sales data request from user"""
+    print("welcome to Afro_styles, please enter yesterday's main sales.")
+    print("please enter four numbers, separated by commas.")
+    print("for_instance: 20,1,44,5\n")
+
+    last_sales = input("Enter last sales: ")
+    print(f"you entered {last_sales}")
+
+
+
+request_main_sales()
