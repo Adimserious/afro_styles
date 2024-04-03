@@ -20,24 +20,24 @@ def request_main_sales():
     """Main sales data request from user"""
 
     while True:
-        print("welcome to Afro_styles, please enter yesterday's main sales.")
+        print("please enter yesterday's main sales.")
         print("please enter four numbers, separated by commas.")
         print("for_instance: 20,1,44,5\n")
 
         last_sales = input("Enter last sales: ")
     
         # split method to break commas from string data in a list
-        main_sales_data = last_sales.split(",")
+        main_sales_rate = last_sales.split(",")
     
         # call rates date from authentic_data and if statement to true rates
-        if authentic_data(main_sales_data):
+        if authentic_data(main_sales_rate):
             print("Data is valid")
             break
-    return main_sales_data
+    return main_sales_rate
 
 def authentic_data(rates):
     """
-    try statement to coverts string rates to integer, raise valueError if not interger or 4 rates exactly
+    try statement to coverts string rates to integer, raise valueError if not interger or 4 rates exactly, run while loop until rates are authentic
     """
     try:
         [int(rate) for rate in rates]
@@ -49,4 +49,15 @@ def authentic_data(rates):
         print(f"Invalid rates: {e}, please try again.\n")
         return False
     return True
-new_data = request_main_sales()
+
+
+def modify_main_sales(new_rate):
+    """modify main_sales worksheet, add new row with new provided rates"""
+    print("modifying main_sales rates......\n")
+    main_sales_worksheet = SHEET.worksheet("main_sales")
+    main_sales_worksheet.append_row(new_rate)
+    print("main_sales_worksheet successfully modified\n")
+
+new_rate = request_main_sales()
+main_sales_rate = [int(sale) for sale in new_rate]
+modify_main_sales(main_sales_rate)
