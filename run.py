@@ -67,14 +67,22 @@ def evaluate_remain_rate(main_sales_row):
     
     # fetching the last row from before sales rate to evaluate remain
     before_sales_row = before_sales[-1]
-    print(before_sales_row)
+    
+    # convert before sales to integer, loop through before sales and main sales with zip and append it to remain rate
+    remain_rate = []
+    for before_sales, main_sales in zip(before_sales_row, main_sales_row):
+        remain = int(before_sales) - main_sales
+        remain_rate.append(remain)
+   
+    return remain_rate
 
 def main():
     """All program functions wrapped here and run"""
     new_rate = request_main_sales()
     main_sales_rate = [int(sale) for sale in new_rate]
     modify_main_sales(main_sales_rate)
-    evaluate_remain_rate(main_sales_rate)
+    update_remain_rate = evaluate_remain_rate(main_sales_rate)
+    print(update_remain_rate)
 
 print("Welcome to Afro_styles rate automation")
 main()    
