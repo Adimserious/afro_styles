@@ -58,6 +58,23 @@ def modify_main_sales(new_rate):
     main_sales_worksheet.append_row(new_rate)
     print("main_sales_worksheet successfully modified\n")
 
-new_rate = request_main_sales()
-main_sales_rate = [int(sale) for sale in new_rate]
-modify_main_sales(main_sales_rate)
+def evaluate_remain_rate(main_sales_row):
+    """compare main sales to before sales"""
+    print("evaluating remain rates...\n")
+
+    # fetching data from worksheet using gspread method
+    before_sales = SHEET.worksheet("before_sales").get_all_values()
+    
+    # fetching the last row from before sales rate to evaluate remain
+    before_sales_row = before_sales[-1]
+    print(before_sales_row)
+
+def main():
+    """All program functions wrapped here and run"""
+    new_rate = request_main_sales()
+    main_sales_rate = [int(sale) for sale in new_rate]
+    modify_main_sales(main_sales_rate)
+    evaluate_remain_rate(main_sales_rate)
+
+print("Welcome to Afro_styles rate automation")
+main()    
