@@ -58,6 +58,14 @@ def modify_main_sales(new_rate):
     main_sales_worksheet.append_row(new_rate)
     print("main_sales_worksheet successfully modified\n")
 
+
+def modify_remain(new_rate):
+    """modify remain worksheet by adding new row"""
+    print("modifying remain rates......\n")
+    remain_worksheet = SHEET.worksheet("remain")
+    remain_worksheet.append_row(new_rate)
+    print("remain worksheet successfully modified\n")    
+
 def evaluate_remain_rate(main_sales_row):
     """compare main sales to before sales"""
     print("evaluating remain rates...\n")
@@ -82,7 +90,7 @@ def main():
     main_sales_rate = [int(sale) for sale in new_rate]
     modify_main_sales(main_sales_rate)
     update_remain_rate = evaluate_remain_rate(main_sales_rate)
-    print(update_remain_rate)
+    modify_remain(update_remain_rate)
 
 print("Welcome to Afro_styles rate automation")
 main()    
