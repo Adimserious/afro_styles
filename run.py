@@ -56,7 +56,7 @@ def modify_main_sales(new_rate):
     print("modifying main_sales rates......\n")
     main_sales_worksheet = SHEET.worksheet("main_sales")
     main_sales_worksheet.append_row(new_rate)
-    print("main_sales_worksheet successfully modified\n")
+    print("main_sales worksheet successfully modified\n")
 
 
 def modify_remain(new_rate):
@@ -84,6 +84,23 @@ def evaluate_remain_rate(main_sales_row):
    
     return remain_rate
 
+
+def last_four_main_sales():
+    """Calculate last four collumns of the main_sales for every afro_style and return as a list"""
+    main_sales = SHEET.worksheet("main_sales")
+    
+    # access all las 4 columns using gspread col_value method
+    all_collums = []
+    for one in range(1,5):
+        one_collumn = main_sales.col_values(one)
+        all_collums.append(one_collumn[-4: ])
+
+    return all_collums 
+
+
+
+
+
 def main():
     """All program functions wrapped here and run"""
     new_rate = request_main_sales()
@@ -93,4 +110,7 @@ def main():
     modify_remain(update_remain_rate)
 
 print("Welcome to Afro_styles rate automation")
-main()    
+
+main() 
+
+main_sales_collums = last_four_main_sales()
