@@ -19,12 +19,14 @@ main_sales = SHEET.worksheet("main_sales")
 def request_main_sales():
     """Main sales data request from user"""
 
+    # Loop until authentic rates are inputed
     while True:
         print("please enter yesterday's main sales.")
         print("please enter four numbers, separated by commas.")
         print("for_instance: 20,1,44,5\n")
 
         last_sales = input("Enter last sales:\n")
+        print(f"you entered {last_sales}")
     
         # split method to break commas from string data in a list
         main_sales_rate = last_sales.split(",")
@@ -123,7 +125,7 @@ def evaluate_before_sales(return_rates):
 
 
 
-def main():
+def main_functions():
     """All program functions wrapped here and run"""
     new_rate = request_main_sales()
     main_sales_rate = [int(sale) for sale in new_rate]
@@ -136,4 +138,4 @@ def main():
 
 print("Welcome to Afro_styles rate automation")
 
-main() 
+main_functions() 
