@@ -24,7 +24,7 @@ def request_main_sales():
         print("please enter four numbers, separated by commas.")
         print("for_instance: 20,1,44,5\n")
 
-        last_sales = input("Enter last sales: ")
+        last_sales = input("Enter last sales:\n")
     
         # split method to break commas from string data in a list
         main_sales_rate = last_sales.split(",")
