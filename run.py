@@ -64,7 +64,15 @@ def modify_remain(new_rate):
     print("modifying remain rates......\n")
     remain_worksheet = SHEET.worksheet("remain")
     remain_worksheet.append_row(new_rate)
-    print("remain worksheet successfully modified\n")    
+    print("remain worksheet successfully modified\n")
+
+def modify_before_sales(new_rate):
+    """Modify before sales rate with recommended values to the new row"""
+    print("modifying before_sales rates.....\n")
+    before_sales_worksheet = SHEET.worksheet("before_sales")
+    before_sales_worksheet.append_row(new_rate)
+    print("before_sales worksheet successfully modified")
+
 
 def evaluate_remain_rate(main_sales_row):
     """compare main sales to before sales"""
@@ -98,6 +106,20 @@ def last_four_main_sales():
     return all_collums 
 
 
+def evaluate_before_sales(return_rates):
+    """Evaluate mean rate for each list item and convert to integer"""
+    print("evaluating before sales rate...\n")
+
+    new_before_sales = []
+    # loop through each column
+    for col in return_rates:
+        column = [int(num) for num in col]
+        mean = sum(column) / 4
+        # Add ten percent to mean as recommendation for future sales
+        before_sales_add = mean * 1.1
+        new_before_sales.append(round(before_sales_add))
+
+    return new_before_sales    
 
 
 
@@ -108,9 +130,10 @@ def main():
     modify_main_sales(main_sales_rate)
     update_remain_rate = evaluate_remain_rate(main_sales_rate)
     modify_remain(update_remain_rate)
+    main_sales_collums = last_four_main_sales()
+    before_sales_rate = evaluate_before_sales(main_sales_collums)
+    modify_before_sales(before_sales_rate) 
 
 print("Welcome to Afro_styles rate automation")
 
 main() 
-
-main_sales_collums = last_four_main_sales()
