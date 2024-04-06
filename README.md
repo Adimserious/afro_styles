@@ -1,32 +1,96 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Afro_Styles - An African Fashion shop automation
 
-Welcome,
+### Introduction to the project
+This project is a simple command line application built with python, designed to automate future sales predictions by using user inputs from the last four markert sales to give recommendations for future products that are bought before sales in other to improve sales by not running out of products or buying too many products. The Afro_styles is an African fashion shop that wants to predict the avarage fashion wears that should be ordered in the future.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
 
-## Reminders
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+### Contents
 
-## Creating the Heroku app
+## User experience (UX)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### Target audience
+- People who run daily sale
+- People who want to make better sale
+- Pople who wants to save cost
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### User story
+As a first time user of the application, you want to:
+- understand the simple input instructions 
+- input the corret data type
+- get predictions in seconds
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+As a frequent user, you want to:
+- You want to keep automating future sales predictions 
+- You will be familiar with the input requirements
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Flow Chart
 
-Connect your GitHub repository and deploy as normal.
+### Features
+start screen:
+The user is greated with a welcome message followed by the input requirements.
 
-## Constraints
+## Technologies used
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Languages used
 
----
+### Software used
+Draw.io - To create a Flow Chart. <br>
+Gitpod - To code the project. <br>
+Git - For version control. <br>
+Github - To store to project. <br>
+Heroku – To deploy the project. <br>
+Ci Python Linter – To validate the python code.
 
-Happy coding!
+### Data model
+
+### Libraries used
+
+## Deployment
+The project was coded with gitpod, stored on github and then deployed to Heroku. 
+The deployment was done this way:
+1.  Create a requirements.txt with the terminal comand: pip3 freeze > requirements.txt
+2.  Pushed the latested code and requirements.txt on to Github.
+3.	Log in to Heroku or create an account first.
+4.	Click on the New Button on the dashboard in the top right corner.
+5.	Click on "Create new app".
+6.	Select the relevant region. In my case, I chose Europe.
+7.  Select an app name that does not yet exist on heroku.
+8.	Click on the "Create app" button.
+9.	Click on the settings tab.
+10.	Scroll to the buildpacks and click on "add buildpack," select "Python," and click "Add Buildpack".
+11.	Repeat last step and add "node.js" buildpack. <br>
+    IMPORTANT: First the python buildpack must be displayed, then the pack from node.js. It can be moved via drag and drop. 
+12.	Click on the deploy tab.
+13.	Click on Github as the deployment method.
+14.	Search for the repository name and click on conncet.
+15.	Select Enable Automatic Deploys"
+16. Click on "Deploy Branch"
+17. Click on the "View" button which leads to the deployed app.
+
+## Testing
+
+### Manual testing
+
+### Validator tests
+
+### Solved bugs
+
+## Credits
+
+### Code used
+
+### Content for the project
+
+### Learning materials
+- All content from Online Course in Full Stack Software Development particularly videos about Portfolio Project 3 and ReadME from Code Instituet.
+
+### Acknowledgments
+
+I like to thank the follow persons for the help during the project:
+- My Code Institute mentor.
+- The Tutor Support team at Code Institute.
+- Slack pear group.
+- To all people who make their knowledge available for free in the internet, especially on youtube.
+
+**This project is for educational use only and was created for the Code Institute course Full stack software development by Lilian Amatobi.**

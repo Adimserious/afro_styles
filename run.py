@@ -73,7 +73,21 @@ def modify_before_sales(new_rate):
     print("modifying before_sales rates.....\n")
     before_sales_worksheet = SHEET.worksheet("before_sales")
     before_sales_worksheet.append_row(new_rate)
+    print("Almost done.....\n")
     print("before_sales worksheet successfully modified")
+    
+
+def sales_prediction(new_rate):
+    """Display modify before sales to user as dictionary"""
+    print("There you have it, the following predictions are recommended for future sales\n")
+
+    headings = SHEET.worksheet("before_sales").row_values(1)
+    print(headings)
+    last_row = SHEET.worksheet("before_sales").row_values()
+    print(last_row)
+
+    dictionary = dict(zip(headings, last_row))
+    print(dictionary)
 
 
 def evaluate_remain_rate(main_sales_row):
@@ -134,8 +148,10 @@ def main_functions():
     modify_remain(update_remain_rate)
     main_sales_collums = last_four_main_sales()
     before_sales_rate = evaluate_before_sales(main_sales_collums)
-    modify_before_sales(before_sales_rate) 
+    modify_before_sales(before_sales_rate)
+    # sales_prediction = (modify_before_sales)
 
 print("Welcome to Afro_styles rate automation")
 
-main_functions() 
+# main_functions() 
+sales_prediction(modify_before_sales)
