@@ -89,6 +89,8 @@ def sales_prediction(new_rate):
     dictionary = dict(zip(headings, last_row))
     print(dictionary)
 
+    print(f"Thank you for using our service, click run program to start again\n")
+
 
 def evaluate_remain_rate(main_sales_row):
     """compare main sales to before sales"""
@@ -153,5 +155,5 @@ def main_functions():
 
 print("Welcome to Afro_styles rate automation")
 
-# main_functions() 
+main_functions() 
 sales_prediction(modify_before_sales)

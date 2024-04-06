@@ -29,11 +29,44 @@ As a frequent user, you want to:
 ### Features
 start screen:
 The user is greated with a welcome message followed by the input requirements.
+!
+Exactly 4 inputs number(s) are allowed separated by commas.
+if numbers are less or more than 4, a value error message will be promped to inform user that 4 numbers are the exact requirements.
+
+if letters are inputed, a different ValueError is raised to let user know that only integers are required
+!
+
+If the input is not valid, the user is prompted again until a valid input is given.
+!
+
+Once valid data is inputted, the user gets a confirmation of their input and a data is valid message is seen.
+!![alt text](image-1.png)
+
+main_sales worksheet modifying prompt means that the input data is being transferred to the main_sales worksheet 
+!
+evaluating remain rate prompt 
+!
+
+modifying remain rates prompt to explain that remain rates are being modified or calculated.
+!
+remain worksheet successfully modified prompt
+!
+evaluating before sales rate prompt
+!
+modifying before_sales rate prompt
+!
+before_sales worksheet successfully modified prompt
+!
+There you have it, the following predictions are recommended for future sales prompt
+!
+
+predictions are printed in key value pairs.
+!
 
 ## Technologies used
 
 ### Languages used
-
+python is used for the program 
 ### Software used
 Draw.io - To create a Flow Chart. <br>
 Gitpod - To code the project. <br>
@@ -43,8 +76,12 @@ Heroku – To deploy the project. <br>
 Ci Python Linter – To validate the python code.
 
 ### Data model
+Data is stored in Google spreadsheet in this project, which includes the user input for numbers stored in the main_sales,
+remain and before_sales values calculated from the program and stored in the remain and before_sales colums respectively 
 
 ### Libraries used
+- gspread
+- google.oauth
 
 ## Deployment
 The project was coded with gitpod, stored on github and then deployed to Heroku. 
@@ -71,17 +108,20 @@ The deployment was done this way:
 ## Testing
 
 ### Manual testing
+I have tested all input options, valid input and in-valid input by the user. These tests were carried out throughout the entire project process. Finally, no more errors occurred. The detailed error messages to the user are also explained in the features section.
 
 ### Validator tests
+CI Python Linter test: <br>
 
 ### Solved bugs
 
 ## Credits
 
 ### Code used
+I got my inspiration from the code institute love sandwiches project
 
 ### Content for the project
-
+the content of this project was written by LILIAN AMATOBI.
 ### Learning materials
 - All content from Online Course in Full Stack Software Development particularly videos about Portfolio Project 3 and ReadME from Code Instituet.
 
