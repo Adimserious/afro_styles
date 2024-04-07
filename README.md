@@ -6,6 +6,47 @@ This project is a simple command line application built with python, designed to
 
 
 ### Contents
+[Introduction to the project](#introduction-to-the-project) 
+
+[User experience (UX)](#user-experience-ux) 
+
+[Target audience](#target-audience)
+
+[User story](#user-story)
+
+[Flow Chart](#flow-chart)
+
+[Features](#features)
+
+[Technologies used](#technologies-used)
+
+[Languages used](#languages-used)
+
+[Software used](#software-used)
+
+[Data model](#data-model)
+
+[Libraries used](#libraries-used)
+
+[Deployment](#deployment)
+
+[Testing](#testing)
+
+[Manual testing](#manual-testing)
+
+[Validator tests](#validator-tests)
+
+[Solved bugs](#solved-bugs)
+
+[Credits](#credits)
+
+[Code used](#code-used)
+
+[Content for the project](#content-for-the-project)
+
+[Learning materials](#learning-materials)
+
+[Acknowledgments](#acknowledgments)
 
 ## User experience (UX)
 
@@ -75,6 +116,7 @@ predictions are printed in key value pairs.
 
 ### Languages used
 python is used for the program 
+
 ### Software used
 Draw.io - To create a Flow Chart. <br>
 Gitpod - To code the project. <br>
@@ -130,15 +172,16 @@ I got my inspiration from the code institute love sandwiches project
 
 ### Content for the project
 the content of this project was written by LILIAN AMATOBI.
+
 ### Learning materials
 - All content from Online Course in Full Stack Software Development particularly videos about Portfolio Project 3 and ReadME from Code Instituet.
 
 ### Acknowledgments
 
 I like to thank the follow persons for the help during the project:
-- My Code Institute mentor.
+- My Code Institute mentor Mitko Bachvarov.
 - The Tutor Support team at Code Institute.
 - Slack pear group.
-- To all people who make their knowledge available for free in the internet, especially on youtube.
+- To all the people who make their knowledge available for free in the internet.
 
 **This project is for educational use only and was created for the Code Institute course Full stack software development by Lilian Amatobi.**
