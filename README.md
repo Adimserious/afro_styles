@@ -31,6 +31,8 @@ This project is a simple command line application built with python, designed to
 
 [Libraries used](#libraries-used)
 
+[Creating the Google Spreadsheet](#creating-the-google-spreadsheet)
+
 [Deployment](#deployment)
 
 [Testing](#testing)
@@ -243,13 +245,18 @@ I have tested all input options, valid input and in-valid input by the user. The
 
 ### Validator tests
 CI Python Linter test: <br>
+ - At first, running the Python Linter initial findings revealed warnings regarding trailing whitespace and too many lines due to line length exceeding standards. After rectifying these issues, subsequent runs reported no errors. See image below for details.
 
-### Solved bugs
+![validation image](/ci_p_linter.png)
+
+### Solved bugs 🐛
+i encountered a bug when trying to return the first and last rows from the Afro_styles spreadsheet, return it to the user as key value. the last row is an empty list so it returned an empty list untill i found solution from tutor support of the code institute to return the whole list first then access the last row from there.  
+
 
 ## Credits
 
 ### Code used
-I got my inspiration from the code institute love sandwiches project
+I got my inspiration from the code institute love sandwiches project 
 
 ### Content for the project
 the content of this project was written by LILIAN AMATOBI.
