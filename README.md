@@ -29,10 +29,11 @@ As a frequent user, you want to:
 ### Features
 start screen:
 The user is greated with a welcome message followed by the input requirements.
-!
+![welcome and input text in start screen ](welcome.png)
+
 Exactly 4 inputs number(s) are allowed separated by commas.
 if numbers are less or more than 4, a value error message will be promped to inform user that 4 numbers are the exact requirements.
-
+![]()
 if letters are inputed, a different ValueError is raised to let user know that only integers are required
 !
 
@@ -40,23 +41,29 @@ If the input is not valid, the user is prompted again until a valid input is giv
 !
 
 Once valid data is inputted, the user gets a confirmation of their input and a data is valid message is seen.
-!![alt text](image-1.png)
+!![valid data input image](valid_data.png)
 
-main_sales worksheet modifying prompt means that the input data is being transferred to the main_sales worksheet 
-!
+Just after valid data prompt comes the main_sales worksheet modifying prompt, this means that the input data is being transferred to the main_sales worksheet 
+![modify main-sales image](/modify_ms.png)
+
 evaluating remain rate prompt 
-!
+![remain rate evaluation image](/remain_rate_eval.png)
 
 modifying remain rates prompt to explain that remain rates are being modified or calculated.
-!
+![modifying remain_rate image](/modify-remain.png)
+
 remain worksheet successfully modified prompt
-!
+![modified remain image](/modified_remain.png)
+
 evaluating before sales rate prompt
-!
+![evaluating before_sales image](/bf_sales_eval.png)
+
 modifying before_sales rate prompt
-!
+![modifying before_sales image](/modifyn_bf_sales.png)
+
 before_sales worksheet successfully modified prompt
-!
+![](/bf_worksht_modified.png)
+
 There you have it, the following predictions are recommended for future sales prompt
 !
 
