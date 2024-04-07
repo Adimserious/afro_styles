@@ -139,6 +139,45 @@ remain and before_sales values calculated from the program and stored in the rem
 - [`google.oauth2.service_account`](https://google-auth.readthedocs.io/en/master/reference/google.oauth2.service_account.html) (Google Authentication)
 - [`gspread`](https://docs.gspread.org/en/v5.10.0/) (Google Sheets Functionality)
 
+### Creating the Google Spreadsheet:
+
+1. **Log in** (or sign up) to your Google Account.
+2. **Access Google Spreadsheet:** Navigate to Google Sheets.
+3. **Create a new spreadsheet** and give it a descriptive name, e.g., 'flexibook' like the name of the application.
+4. **Rename the worksheet** (e.g., 'confirmation') and add, if necessary, additional worksheets.
+5. **Add headings** (Confirmation code, day, time and name).
+
+### Setting up the APIs:
+
+1. **Navigate to the Google Cloud Platform:**
+   - Create a new project by clicking the button "Select a project" and then selecting "New project."
+   - Give the project a descriptive and meaningful name, e.g., Afro_styles, and click on the "CREATE" button.
+   - In the Notifications pop-up, click on "SELECT PROJECT."
+   
+2. **On the project page:**
+   - Go to the menu (click the burger icon in the top-left corner of the page), click on "APIs and services," and then select "Library."
+   - In the search bar, search for "Google Drive" and enable it.
+   - Click on "Credentials" in the sidebar and then select "+ CREATE CREDENTIALS > Help me choose."
+   
+3. **Credential setup:**
+   - Select "Google Drive API" and "Application Data" in the Credential Type section and click on the "NEXT" button.
+   - Enter a custom service name and click the "CREATE AND CONTINUE" button.
+   - Select "Editor" as the role in the Quick access section Basic and press the "CONTINUE" button.
+   - Leave the form fields in the next question blank and click on "DONE."
+   - Click on the email from the newly created Service Account.
+   - Click on the Tab "KEYS" and then select "Create new key" from the dropdown menu of the "ADD KEY" button.
+   - Keep the key type as JSON and click the "CREATE" button. Download the JSON file to your local machine.
+
+4. **Enable Google Sheets API:**
+   - Go back to the library again, search for "Google Sheets API," and enable it.
+
+5. **Drag and drop credential-json file:**
+   - Drag and drop the credential JSON file (downloaded after step 3) into the workspace and rename it as "creds.json" for simplicity.
+
+6. **Sharing the Spreadsheet:**
+   - Open the JSON file in the workspace, copy the client email (without the quotes).
+   - Go to the created Google Spreadsheet, click the "Share" button.
+   - Paste in the email address (from step 6), select "Editor," and then click "Share."
 
 ## Deployment
 The project was coded with gitpod, stored on github and then deployed to Heroku. 
