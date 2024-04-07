@@ -83,11 +83,8 @@ def sales_prediction(new_rate):
 
     headings = SHEET.worksheet("before_sales").row_values(1)
     print(headings)
-    last_row = SHEET.worksheet("before_sales").row_values()
-    print(last_row)
-
-    dictionary = dict(zip(headings, last_row))
-    print(dictionary)
+    list_of_lists = SHEET.worksheet("before_sales").get_all_values()
+    print(list_of_lists[-1])
 
     print(f"Thank you for using our service, click run program to start again\n")
 
