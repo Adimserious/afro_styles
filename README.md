@@ -107,10 +107,13 @@ before_sales worksheet successfully modified prompt
 ![](/bf_worksht_modified.png)
 
 There you have it, the following predictions are recommended for future sales prompt
-!
+![There you have it text promt image](/thereyou_haveit.png)
 
 predictions are printed in key value pairs.
-!
+![key-value pair prediction image](/key_value_dict.png)
+
+User is thanked for using the service in the end together with a message to run the program again if desired.
+![all prompt and thank you image](/thank_you.png)
 
 ## Technologies used
 
