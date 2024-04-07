@@ -1,4 +1,4 @@
-# import gspread library and credential class from google-auth library after download 
+# import gspread library and credential class from google-auth library
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -16,6 +16,7 @@ SHEET = GSPREAD_CLIENT.open("afro_styles")
 
 main_sales = SHEET.worksheet("main_sales")
 
+
 def request_main_sales():
     """Main sales data request from user"""
 
@@ -27,19 +28,22 @@ def request_main_sales():
 
         last_sales = input("Enter last sales:\n")
         print(f"you entered {last_sales}")
-    
+
         # split method to break commas from string data in a list
         main_sales_rate = last_sales.split(",")
-    
+
         # call rates date from authentic_data and if statement to true rates
         if authentic_data(main_sales_rate):
             print("Data is valid")
             break
     return main_sales_rate
 
+
 def authentic_data(rates):
     """
-    try statement to coverts string rates to integer, raise valueError if not interger or 4 rates exactly, run while loop until rates are authentic
+    try statement to coverts string rates to integer,
+    raise valueError if not interger or 4 rates exactly,
+    run while loop until rates are authentic
     """
     try:
         [int(rate) for rate in rates]
@@ -68,6 +72,7 @@ def modify_remain(new_rate):
     remain_worksheet.append_row(new_rate)
     print("remain worksheet successfully modified\n")
 
+
 def modify_before_sales(new_rate):
     """Modify before sales rate with recommended values to the new row"""
     print("modifying before_sales rates.....\n")
@@ -75,18 +80,20 @@ def modify_before_sales(new_rate):
     before_sales_worksheet.append_row(new_rate)
     print("Almost done.....\n")
     print("before_sales worksheet successfully modified")
-    
+
 
 def sales_prediction(new_rate):
     """Display modify before sales to user as dictionary"""
-    print("There you have it, the following predictions are recommended for future sales\n")
+    print("There you have it!\n")
+    print("The following predictions are recommended for future sales\n")
 
     headings = SHEET.worksheet("before_sales").row_values(1)
     print(headings)
     list_of_lists = SHEET.worksheet("before_sales").get_all_values()
     print(list_of_lists[-1])
 
-    print(f"Thank you for using our service, click run program to start again\n")
+    print(f"Thank you for using our service.\n")
+    print("Click RUN PROGRAM to start again\n")
 
 
 def evaluate_remain_rate(main_sales_row):
@@ -95,30 +102,32 @@ def evaluate_remain_rate(main_sales_row):
 
     # fetching data from worksheet using gspread method
     before_sales = SHEET.worksheet("before_sales").get_all_values()
-    
+
     # fetching the last row from before sales rate to evaluate remain
     before_sales_row = before_sales[-1]
-    
-    # convert before sales to integer, loop through before sales and main sales with zip and append it to remain rate
+
+    # convert before sales to integer,
+    # loop through before_sales, main_sales with zip, append it to remain rate
     remain_rate = []
     for before_sales, main_sales in zip(before_sales_row, main_sales_row):
         remain = int(before_sales) - main_sales
         remain_rate.append(remain)
-   
+
     return remain_rate
 
 
 def last_four_main_sales():
-    """Calculate last four collumns of the main_sales for every afro_style and return as a list"""
+    """Calculate last four collumns of the main_sales for every afro_style
+    and return as a list
+    """
     main_sales = SHEET.worksheet("main_sales")
-    
+
     # access all las 4 columns using gspread col_value method
     all_collums = []
-    for one in range(1,5):
+    for one in range(1, 5):
         one_collumn = main_sales.col_values(one)
-        all_collums.append(one_collumn[-4: ])
-
-    return all_collums 
+        all_collums.append(one_collumn[-4:])
+    return all_collums
 
 
 def evaluate_before_sales(return_rates):
@@ -133,9 +142,7 @@ def evaluate_before_sales(return_rates):
         # Add ten percent to mean as recommendation for future sales
         before_sales_add = mean * 1.1
         new_before_sales.append(round(before_sales_add))
-
-    return new_before_sales    
-
+    return new_before_sales
 
 
 def main_functions():
@@ -150,7 +157,9 @@ def main_functions():
     modify_before_sales(before_sales_rate)
     # sales_prediction = (modify_before_sales)
 
+
 print("Welcome to Afro_styles rate automation")
 
-main_functions() 
+main_functions()
+
 sales_prediction(modify_before_sales)

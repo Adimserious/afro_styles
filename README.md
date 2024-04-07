@@ -226,13 +226,13 @@ The deployment was done this way:
 7.  Select an app name that does not yet exist on heroku.
 8.	Click on the "Create app" button.
 9.	Click on the settings tab.
-10.	Scroll to the buildpacks and click on "add buildpack," select "Python," and click "Add Buildpack".
-11.	Repeat last step and add "node.js" buildpack. <br>
+10. Scroll to the buildpacks and click on "add buildpack," select "Python," and click "Add Buildpack".
+11. Repeat last step and add "node.js" buildpack. <br>
     IMPORTANT: First the python buildpack must be displayed, then the pack from node.js. It can be moved via drag and drop. 
-12.	Click on the deploy tab.
-13.	Click on Github as the deployment method.
-14.	Search for the repository name and click on conncet.
-15.	Select Enable Automatic Deploys"
+12. Click on the deploy tab.
+13. Click on Github as the deployment method.
+14. Search for the repository name and click on conncet.
+15. Select Enable Automatic Deploys"
 16. Click on "Deploy Branch"
 17. Click on the "View" button which leads to the deployed app.
 
