@@ -179,6 +179,41 @@ remain and before_sales values calculated from the program and stored in the rem
    - Go to the created Google Spreadsheet, click the "Share" button.
    - Paste in the email address (from step 6), select "Editor," and then click "Share."
 
+### Connecting the APIs to Python:
+
+1. **Install dependencies:**
+   - In the workspace terminal, run the command 'pip3 install gspread google-auth'.
+   
+2. **Import libraries:**
+   - Import the gspread library at the top of the Python file in the workspace.
+   - Import the Credentials from the Google Auth Account (google.oauth2.service_account).
+   
+3. **Set SCOPE and create CREDS:**
+   - Set the SCOPE, listing the APIs the program needs to access to run.
+   - Create CREDS using the gspread authorise method to access the created worksheet data.
+
+**Note:** Ensure the JSON file is never committed to GitHub as it contains sensitive information. Create a .gitignore file in the workspace and add the name of the JSON file to it.
+
+## Google Sheets
+- I used Code Institutes Project 3 Love-Sandwhiches tutorial to help me understand how to import my google sheets, below is how I did this:
+
+import gspread
+from google.oauth2.service_account import Credentials
+
+# Google Sheets API scope and credentials
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file("creds.json")
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open("afro_styles")
+
+main_sales = SHEET.worksheet("main_sales")
+
 ## Deployment
 The project was coded with gitpod, stored on github and then deployed to Heroku. 
 The deployment was done this way:
