@@ -33,19 +33,20 @@ The user is greated with a welcome message followed by the input requirements.
 
 Exactly 4 inputs number(s) are allowed separated by commas.
 if numbers are less or more than 4, a value error message will be promped to inform user that 4 numbers are the exact requirements.
-![]()
+![more or less invalid input image](/more_less_invalid.png)
+
 if letters are inputed, a different ValueError is raised to let user know that only integers are required
-!
+![invalid letters input image](/invalid_letters.png)
 
 If the input is not valid, the user is prompted again until a valid input is given.
-!
+![repeated input requests image](/loop_input.png)
 
 Once valid data is inputted, the user gets a confirmation of their input and a data is valid message is seen.
 !![valid data input image](valid_data.png)
 
 Just after valid data prompt comes the main_sales worksheet modifying prompt, this means that the input data is being transferred to the main_sales worksheet 
 ![modify main-sales image](/modify_ms.png)
-
+ 
 evaluating remain rate prompt 
 ![remain rate evaluation image](/remain_rate_eval.png)
 
