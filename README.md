@@ -1,8 +1,11 @@
-# Afro_Styles - An African Fashion shop automation
+# Afro_Styles - An African Fashion shop automation service.
 
 ### Introduction to the project
 This project is a simple command line application built with python, designed to automate future sales predictions by using user inputs from the last four markert sales to give recommendations for future products that are bought before sales in other to improve sales by not running out of products or buying too many products. The Afro_styles is an African fashion shop that wants to predict the avarage fashion wears that should be ordered in the future.
 
+[**LIVE SITE**]()
+
+[**REPOSITORY**]()
 
 
 ### Contents
@@ -133,8 +136,9 @@ Data is stored in Google spreadsheet in this project, which includes the user in
 remain and before_sales values calculated from the program and stored in the remain and before_sales colums respectively 
 
 ### Libraries used
-- gspread
-- google.oauth
+- [`google.oauth2.service_account`](https://google-auth.readthedocs.io/en/master/reference/google.oauth2.service_account.html) (Google Authentication)
+- [`gspread`](https://docs.gspread.org/en/v5.10.0/) (Google Sheets Functionality)
+
 
 ## Deployment
 The project was coded with gitpod, stored on github and then deployed to Heroku. 
