@@ -1,7 +1,7 @@
 # Afro_Styles - An African Fashion shop automation service.
 
 ### Introduction to the project
-This project is a simple command line application built with python, designed to automate future sales predictions by using user inputs from the last four markert sales to give recommendations for future products that are bought before sales in other to improve sales by not running out of products or buying too many products. The Afro_styles is an African fashion shop that wants to predict the avarage fashion wears that should be ordered in the future.
+This project is a simple command line application built with python, designed to automate future sales predictions by using user inputs from the last four markert sales, calculate remaining products and give recommendations for future products that should be bought before sales in other to improve sales by not running out of products or buying too many products. The Afro_styles is an African fashion shop that wants to predict the avarage fashion wears that should be ordered in the future.
 
 [**LIVE SITE**](https://afro-styles-0dfbaac1b245.herokuapp.com/)
 
@@ -71,6 +71,7 @@ As a frequent user, you want to:
 - You will be familiar with the input requirements
 
 ### Flow Chart
+![flow chat image](/flow_chat.png)
 
 ### Features
 start screen:
