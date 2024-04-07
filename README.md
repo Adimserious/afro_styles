@@ -3,9 +3,9 @@
 ### Introduction to the project
 This project is a simple command line application built with python, designed to automate future sales predictions by using user inputs from the last four markert sales to give recommendations for future products that are bought before sales in other to improve sales by not running out of products or buying too many products. The Afro_styles is an African fashion shop that wants to predict the avarage fashion wears that should be ordered in the future.
 
-[**LIVE SITE**]()
+[**LIVE SITE**](https://afro-styles-0dfbaac1b245.herokuapp.com/)
 
-[**REPOSITORY**]()
+[**REPOSITORY**](https://github.com/Adimserious/afro_styles.git)
 
 
 ### Contents
